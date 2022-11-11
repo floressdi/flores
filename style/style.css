@@ -1,0 +1,176 @@
+/* ============== GOOGLE FONTS ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Open+Sans:wght@300&family=Yellowtail&display=swap');
+
+
+/*================= Variables CSS ================*/
+:root{
+    --body-color:hsl(0, 0%, 7%);
+    --header-color: hsla(0, 0%, 7%, 0.55);
+    --body-font:'Comfortaa', cursive;
+    --text-color: hsl(0, 0%, 92%);
+    --tema-icon-color: hsl(47, 100%, 59%);
+
+    /* Colores de redes */
+    --youtube-color:hsl(0, 100%, 50%);
+    --web-color:hsl(46, 84%, 48%);
+    --instagram-color:hsl(337, 100%, 43%);
+    --twitter-color:hsl(204, 88%, 53%);
+    --linke-color:hsl(201, 98%, 36%);
+    --github-color:hsl(214, 13%, 10%); 
+}
+
+html{
+    user-select: none;
+}
+
+body.light-theme{
+    --body-color:hsl(56, 32%, 90%);
+    --text-color: hsl(0, 0%, 7%);
+    --header-color: hsla(56, 32%, 90%, 0.35);
+    --tema-icon-color: hsl(269, 74%, 55%);
+}
+
+body{
+    background: var(--body-color);
+    font-family: var(--body-font);
+    transition:all 300ms ease-out;
+}
+
+body::-webkit-scrollbar{
+    width: 3px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(82,82,82);
+    border-radius: 4px;
+}
+
+.name{
+    font-family:'Yellowtail';
+    background: #CF1512;
+    background: linear-gradient(to right, #CF1512 35%, #121FCF 65%);
+    background-clip: border-box;
+    background-size: auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.imagen{
+    width:100px;
+    height:100px;
+    background-image:url('../img/Doddery\ Spore.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.txt-color{
+    color: var(--text-color);
+}
+.divcenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.youtube, .github, .twitter, .instagram,.linkedin, .web{
+    transition:all 500ms ease-out;
+}
+
+.youtube{
+    background-color: var(--youtube-color);
+}
+
+.instagram{
+    background-color: var(--instagram-color);
+}
+
+.twitter{
+    background-color:var(--twitter-color);
+}
+
+.linkedin{
+    background-color: var(--linke-color);
+}
+
+.github{
+    background-color: var(--github-color);
+}
+
+.web{
+    background-color: var(--web-color);
+}
+
+.header{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top:  0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--header-color);
+    backdrop-filter: blur(10px);
+}
+
+.btn-theme{
+    width: 38px;
+    height: 38px;
+    border-radius: 15%;
+    font-size: 1.1rem;
+    color: var(--body-color);
+    background-color:var(--tema-icon-color);
+    transition:all 200ms ease-in-out;
+}
+    
+.youtube:hover{background: var(--text-color);
+    color: var(--youtube-color);
+}
+
+.github:hover{background:var(--text-color);
+    color: var(--body-color);
+}
+
+.twitter:hover{background: var(--text-color);
+    color: var(--twitter-color);
+}
+
+.linkedin:hover{background: var(--text-color);
+    color: var(--linke-color);
+
+}
+.instagram:hover{background: var(--text-color);
+    color: var(--instagram-color);
+}
+
+.web:hover{background-color: var(--text-color);
+    color: var(--web-color);
+}
+
+.alert{
+    position: fixed;
+    z-index: 10;
+    background-color: var(--header-color);
+    backdrop-filter: blur(10px);
+    /* top: 0; */
+    display: grid;
+    place-items: center;
+    bottom: -500%;
+    transition:all 200ms ease-in-out;
+
+}
+
+.alert__container{
+    border-radius: 30px;
+    width: 350px;
+    height: 400px;
+    background: var(--github-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.show-alert{
+    bottom: 0;
+}
+
